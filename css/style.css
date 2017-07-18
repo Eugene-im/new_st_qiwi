@@ -367,4 +367,32 @@ input[type=radio].css-checkbox {
 [class*="_button"]:hover button {
   background-color: #ff4e00; }
 
+.our_customers [class*="itm_img__"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch; }
+  .our_customers [class*="itm_img__"] .itm_img {
+    background: url(../img/6-layers.png);
+    width: 248px;
+    height: 50px; }
+  .our_customers [class*="itm_img__"] .itm_img.fst {
+    background-position: 0px 0px; }
+  .our_customers [class*="itm_img__"] .first_line,
+  .our_customers [class*="itm_img__"] .second_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+
+.menu_tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
+.our_customers_title_l1,
+.our_customers_title_l2 {
+  text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
