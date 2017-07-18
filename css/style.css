@@ -180,6 +180,9 @@ a {
   color: inherit;
   outline: none; }
 
+input {
+  outline: none; }
+
 body {
   background-color: #fff;
   height: 100vh; }
@@ -317,17 +320,6 @@ section .container {
     background-color: #fff;
     margin: 6px 0;
     transition: 0.4s; }
-  .menu_button input[type=checkbox].css-checkbox {
-    position: absolute;
-    z-index: -1000;
-    left: -1000px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0; }
   .menu_button input[type=checkbox].css-checkbox + label.css-label {
     vertical-align: middle;
     cursor: pointer; }
@@ -339,6 +331,19 @@ section .container {
     transform: rotate(45deg) translate(-8px, -8px); }
   .menu_button input[type=checkbox].css-checkbox:checked ~ #submenu_0 {
     display: inline-block; }
+
+input[type=checkbox].css-checkbox,
+input[type=radio].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
 
 .submenu_1 ul {
   display: flex;
@@ -352,7 +357,6 @@ section .container {
   list-style-type: none; }
 
 [class*="_button"] button {
-  width: 197px;
   height: 41px;
   background-color: #ff8400;
   font-family: "PF Din Text Cond Pro";

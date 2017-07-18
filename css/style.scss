@@ -3,6 +3,9 @@ a {
     color: inherit;
     outline: none;
 }
+input{
+    outline: none;
+}
 
 body {
     background-color: #fff;
@@ -169,18 +172,6 @@ section .container {
         margin: 6px 0;
         transition: 0.4s; // border-radius: 20%;
     }
-    input[type=checkbox].css-checkbox {
-        position: absolute;
-        z-index: -1000;
-        left: -1000px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        width: 1px;
-        margin: -1px;
-        padding: 0;
-        border: 0;
-    }
     input[type=checkbox].css-checkbox+label.css-label {
         vertical-align: middle;
         cursor: pointer;
@@ -198,6 +189,19 @@ section .container {
         display: inline-block
     }
 }
+    input[type=checkbox].css-checkbox,
+    input[type=radio].css-checkbox {
+        position: absolute;
+        z-index: -1000;
+        left: -1000px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    }
 
 .submenu_1 {
     ul {
@@ -223,7 +227,7 @@ section .container {
 
 [class*="_button"] {
     button {
-        width: 197px;
+        // width: 197px;
         height: 41px;
         background-color: rgb(255, 132, 0);
         font-family: "PF Din Text Cond Pro";
@@ -239,3 +243,8 @@ section .container {
     }
 }
 
+.itm_img__radio1{
+	.itm_img{
+
+	}
+}
