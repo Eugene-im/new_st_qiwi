@@ -417,4 +417,10 @@ input[type=radio].css-checkbox:checked + label.css-label > div {
 .our_customers_title_l2 {
   text-align: center; }
 
+.menu_tabs__mobile {
+  display: none; }
+
+section .gallery .item {
+  height: 300px; }
+
 /*# sourceMappingURL=style.css.map */
