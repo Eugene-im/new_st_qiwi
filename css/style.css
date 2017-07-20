@@ -511,15 +511,24 @@ input[type=radio]#radio14.css-checkbox:checked + label > .itm_img__radio4 {
   height: 0;
   border-left: 23.5px solid transparent;
   border-right: 23.5px solid transparent;
-  border-top: 23.5px solid #fdc029;
+  border-top: 23.5px solid #000;
   position: absolute;
   left: 0;
   right: 0;
   margin: 44px auto 0;
   display: none; }
 
+.triangle_int {
+  width: 25px;
+  height: 30px;
+  background: url(../img/spritesheet_arrow);
+  background-position: 0px 0px; }
+
 input[type=radio].css-checkbox:checked + label.css-label > div {
   display: block; }
+
+input[type=radio].css-checkbox:checked + label.css-label > .triangle_int {
+  background-position: 28px 0px; }
 
 .section_nav {
   display: flex;

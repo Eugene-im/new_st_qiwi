@@ -151,7 +151,7 @@ section .container {
         box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
         top: 96px;
         right: 10px;
-        z-index:999;
+        z-index: 999;
         ul li {
             float: none;
             text-align: left;
@@ -278,10 +278,10 @@ input[type=radio]#radio1.css-checkbox:checked~.section_img .itm_img__radio1,
 input[type=radio]#radio2.css-checkbox:checked~.section_img .itm_img__radio2,
 input[type=radio]#radio3.css-checkbox:checked~.section_img .itm_img__radio3,
 input[type=radio]#radio4.css-checkbox:checked~.section_img .itm_img__radio4,
-input[type=radio]#radio11.css-checkbox:checked + label>.itm_img__radio1,
-input[type=radio]#radio12.css-checkbox:checked + label>.itm_img__radio2,
-input[type=radio]#radio13.css-checkbox:checked + label>.itm_img__radio3,
-input[type=radio]#radio14.css-checkbox:checked + label>.itm_img__radio4 {
+input[type=radio]#radio11.css-checkbox:checked+label>.itm_img__radio1,
+input[type=radio]#radio12.css-checkbox:checked+label>.itm_img__radio2,
+input[type=radio]#radio13.css-checkbox:checked+label>.itm_img__radio3,
+input[type=radio]#radio14.css-checkbox:checked+label>.itm_img__radio4 {
     display: flex;
 }
 
@@ -311,26 +311,25 @@ input[type=radio]#radio14.css-checkbox:checked + label>.itm_img__radio4 {
     }
 }
 
-.section_nav{
-	>label>.triangle{
-
-	}
- [class*="itm_img__"] {
-    .first_line,
-    .second_line {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+.section_nav {
+    >label>.triangle {}
+    [class*="itm_img__"] {
+        .first_line,
+        .second_line {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
     }
-}}
+}
 
 .triangle {
     width: 0;
     height: 0;
     border-left: 23.5px solid transparent;
     border-right: 23.5px solid transparent;
-    border-top: 23.5px solid rgb(253, 192, 41);
+    border-top: 23.5px solid #000;
     position: absolute;
     left: 0;
     right: 0;
@@ -338,8 +337,19 @@ input[type=radio]#radio14.css-checkbox:checked + label>.itm_img__radio4 {
     display: none;
 }
 
-input[type=radio].css-checkbox:checked + label.css-label>div {
+.triangle_int {
+    width: 25px;
+    height: 30px;
+    background: url(../img/spritesheet_arrow);
+    background-position: 0px 0px;
+}
+
+input[type=radio].css-checkbox:checked+label.css-label>div {
     display: block;
+}
+
+input[type=radio].css-checkbox:checked+label.css-label>.triangle_int {
+    background-position: 28px 0px;
 }
 
 .section_nav {
