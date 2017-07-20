@@ -268,11 +268,13 @@ main {
 
 header {
   background-color: #fff; }
-  header .first_line .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: base-line; }
+  header .first_line {
+    padding: 10px; }
+    header .first_line .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
 
 .logo img {
   width: 100%; }
@@ -283,6 +285,150 @@ header {
   content: "";
   height: 4px;
   width: 29px; }
+
+.menu > ul > li.color a {
+  color: #ff8400; }
+
+.menu > ul > li a {
+  color: #1e1e1e; }
+
+.menu > ul > li > .line {
+  width: 20px; }
+
+.line {
+  height: 2px;
+  background: #ff8400;
+  width: 0px; }
+
+.menu ul li:hover > .line {
+  width: 100%;
+  transition: 1s; }
+
+.menu > ul > li ul li:hover > .line {
+  width: 70%; }
+
+.menu {
+  margin: 1% auto; }
+
+#submenu_2 {
+  display: none;
+  position: absolute;
+  width: 20%;
+  min-width: 300px;
+  background: #fff;
+  padding: 1%;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3); }
+
+#submenu_2 {
+  left: 120px; }
+
+#submenu_s1:hover #submenu_2 {
+  display: block; }
+
+.block_form {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+  .block_form form {
+    padding: 20px 16px 16px;
+    transform: skewX(-16.5deg);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 885.3px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .block_form form > div {
+      transform: skewX(16.5deg); }
+    .block_form form .form_title_l1 {
+      color: black;
+      font-size: 35px;
+      font-weight: 400;
+      text-transform: uppercase; }
+    .block_form form .form_title_l2 {
+      color: black;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase; }
+    .block_form form .lable {
+      float: left;
+      width: 100%; }
+    .block_form form .ps1 {
+      display: none; }
+    .block_form form .ps2 {
+      display: block; }
+    .block_form form .aaa {
+      width: auto;
+      height: auto;
+      transform: skewX(0); }
+    .block_form form input[type=checkbox].css-checkbox {
+      width: auto;
+      height: auto;
+      transform: skewX(0);
+      position: absolute;
+      z-index: -1000;
+      left: -1000px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0; }
+    .block_form form input[type=checkbox].css-checkbox + label.css-label {
+      padding-left: 31px;
+      height: 26px;
+      display: inline-block;
+      line-height: 14px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      font-size: 15px;
+      vertical-align: middle;
+      cursor: pointer; }
+    .block_form form input[type=checkbox].css-checkbox:checked + label.css-label {
+      background-position: 0 -26px; }
+    .block_form form label.css-label {
+      background-image: url(../img/check.png);
+      user-select: none; }
+    .block_form form .bbb {
+      box-sizing: border-box;
+      float: left;
+      height: 41px;
+      margin: 0.4% 0.8% 0.8% 0;
+      max-width: 197px;
+      width: 100%;
+      padding: 14px 20px 13px 10px;
+      border: 1px solid #4e5659;
+      font-size: 20px;
+      font-family: "pfdintextcondpro-regular";
+      text-transform: uppercase;
+      color: #2b2a28;
+      text-overflow: clip;
+      background: #ffffff;
+      transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1); }
+    .block_form form .item_button {
+      float: left;
+      margin: 0.4% 0.8% 0.8% 0; }
+      .block_form form .item_button > div {
+        font-size: 25px;
+        font-weight: 500;
+        text-transform: uppercase; }
+  .block_form .block_form_ps {
+    width: auto;
+    float: right;
+    text-align: right;
+    z-index: 9999999999;
+    position: relative;
+    color: white;
+    margin-right: 12%; }
+    .block_form .block_form_ps a {
+      color: white;
+      text-transform: uppercase;
+      text-decoration: underline; }
 
 nav {
   background-color: #ff8400;
@@ -304,6 +450,10 @@ footer {
   .error_display p {
     font-size: 150px;
     font-style: normal; }
+
+.call_back_number {
+  font-size: 19px;
+  text-align: center; }
 
 .www,
 .footer_menu,
@@ -369,7 +519,7 @@ section .container {
     background: #fff;
     padding: 1%;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
-    top: 96px;
+    top: 120px;
     right: 10px;
     z-index: 999; }
     .menu_button #submenu_0 ul li {
@@ -473,6 +623,12 @@ input[type=radio]#radio13.css-checkbox:checked + label > .itm_img__radio3,
 input[type=radio]#radio14.css-checkbox:checked + label > .itm_img__radio4 {
   display: flex; }
 
+[class*="itm_img__"] {
+  background: #fff; }
+
+.section_nav > label {
+  width: 100%; }
+
 .section_img [class*="itm_img__"],
 .section_nav [class*="itm_img__"] {
   display: none;
@@ -522,10 +678,12 @@ input[type=radio]#radio14.css-checkbox:checked + label > .itm_img__radio4 {
   width: 25px;
   height: 30px;
   background: url(../img/spritesheet_arrow);
-  background-position: 0px 0px; }
+  background-position: 0px 0px;
+  display: inline-block;
+  vertical-align: middle; }
 
 input[type=radio].css-checkbox:checked + label.css-label > div {
-  display: block; }
+  display: inline-block; }
 
 input[type=radio].css-checkbox:checked + label.css-label > .triangle_int {
   background-position: 28px 0px; }
@@ -550,7 +708,7 @@ input[type=radio].css-checkbox:checked + label.css-label > .triangle_int {
   font-style: italic; }
 
 section .gallery .item {
-  height: 300px; }
+  height: 400px; }
 
 .about_our_equip__item_text {
   font-size: 30px;
@@ -586,7 +744,7 @@ section .gallery .item {
     display: none; }
 
   .logo.span_4_of_12 {
-    width: 32.26%; }
+    width: 39%; }
 
   .call_back.span_2_of_12 {
     width: 44.73%; }
@@ -598,7 +756,65 @@ section .gallery .item {
     display: block; }
 
   .section_nav {
-    align-items: flex-start; } }
+    align-items: flex-start; }
+
+  main .block_form form {
+    width: 100%; }
+
+  main .block_form .content {
+    padding: 0 0; }
+
+  main .block_form form,
+  main .block_form form > div,
+  main .block_form form .aaa,
+  main .block_form form .bbb {
+    transform: skewX(0deg); }
+
+  main .block_form .block_form_ps {
+    float: left;
+    margin-right: 0px;
+    margin-left: 3%; }
+
+  main .about .about_what_we_can .about_what_we_can__item .what_we_can__item_img {
+    display: none; }
+
+  main .block_form form .item_button {
+    width: 99%; }
+
+  main .block_form form .form_title_l1 {
+    font-size: 23px;
+    margin: 0 0 5px 0; }
+
+  main .block_form form .form_title_l2 {
+    margin: 0 0 5px 0; }
+
+  main .block_form form .bbb {
+    width: 99%;
+    max-width: none; }
+
+  main .block_form .block_form_ps {
+    display: none;
+    width: 77%;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0 auto;
+    float: none;
+    overflow: hidden; }
+
+  main .block_form form .ps1 {
+    display: block;
+    color: black;
+    font-size: 14px;
+    margin: 0px auto 2px;
+    line-height: 85%;
+    padding: 2px 0 0; }
+    main .block_form form .ps1 a {
+      color: black; }
+
+  main .block_form form .ps2 {
+    display: none; } }
 @media (min-width: 1024px) {
   .what_we_can__item_img {
     display: block; }
