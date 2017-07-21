@@ -775,6 +775,10 @@ section .gallery .item {
 
   .menu_tabs__mobile {
     display: block; }
+    .menu_tabs__mobile input[type=radio].css-checkbox + label.css-label {
+      border-bottom: 1px solid black; }
+    .menu_tabs__mobile .section_nav [class*="itm_img__"], .menu_tabs__mobile input[type=radio].css-checkbox + label.i1.css-label {
+      border-top: 1px solid black; }
 
   .section_nav {
     align-items: flex-start; }

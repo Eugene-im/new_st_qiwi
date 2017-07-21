@@ -402,6 +402,7 @@ input[type=checkbox].css-checkbox+label.css-label {
     cursor: pointer;
 }
 
+
 input[type=checkbox].css-checkbox,
 input[type=radio].css-checkbox {
     position: absolute;
@@ -648,132 +649,161 @@ section .gallery .item {
     }
     .menu_tabs__mobile {
         display: block;
+        input[type=radio].css-checkbox+label.css-label{
+        border-bottom: 1px solid black;
     }
-    .section_nav {
-        align-items: flex-start;
+    .section_nav [class*="itm_img__"],input[type=radio].css-checkbox+label.i1.css-label{
+        border-top: 1px solid black;
     }
-    main .block_form .content {
-        padding: 0 0;
-    }
-    main .block_form form,
-    main .block_form form>div,
-    main .block_form form .aaa,
-    main .block_form form .bbb {
-        transform: skewX(0deg);
-    }
-    main .block_form .block_form_ps {
-        float: left;
-        margin-right: 0px;
-        margin-left: 3%
-    }
-    main .about {
-        .about_what_we_can {
-            .about_what_we_can__item .what_we_can__item_img {
-                display: none;
-            }
-        }
-    }
-    main .block_form form .item_button {
-        width: 99%
-    }
-    main .block_form form .form_title_l1 {
-        font-size: 23px;
-        margin: 0 0 5px 0;
-        text-align: center;
-    }
-    main .block_form form .form_title_l2 {
-        margin: 0 0 5px 0;
-        text-align: center;
-    }
-    main .block_form form .bbb {
-        width: 99%;
-        max-width: none;
-    }
-    main .block_form .block_form_ps {
-        display: none;
-        width: 77%;
-        text-align: center;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        margin: 0 auto;
-        float: none;
-        overflow: hidden;
-    }
-    main .block_form form .ps1 {
-        display: block;
-        color: rgba(0, 0, 0, 1);
-        font-size: 14px;
-        margin: 0px auto 2px;
-        line-height: 85%;
-        padding: 2px 0 0;
-        a {
-            color: rgba(0, 0, 0, 1);
-        }
-    }
-    main .block_form form .ps2 {
-        display: none;
-    }
-    footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
-        .footer_feedback {
-            text-align: center;
-            margin: 35px auto;
-        }
-        >.logo,
-        >.www,
-        >.footer_menu {
+}
+
+.section_nav {
+    align-items: flex-start;
+}
+
+main .block_form .content {
+    padding: 0 0;
+}
+
+main .block_form form,
+main .block_form form>div,
+main .block_form form .aaa,
+main .block_form form .bbb {
+    transform: skewX(0deg);
+}
+
+main .block_form .block_form_ps {
+    float: left;
+    margin-right: 0px;
+    margin-left: 3%
+}
+
+main .about {
+    .about_what_we_can {
+        .about_what_we_can__item .what_we_can__item_img {
             display: none;
         }
-        [class*="_button"] button {
+    }
+}
 
-            height: 15px;
-            background-color: transparent;
-            color: rgb(255, 255, 255);
-            font-family: "PF Din Text Cond Pro";
-            font-size: 16px;
-            font-weight: 400;
-            text-decoration: underline;
-            text-transform: uppercase;
-        }
-        [class*="_button"] button:hover,
-        [class*="_button"]:hover {
-            background-color: transparent;
-        }
+main .block_form form .item_button {
+    width: 99%
+}
+
+main .block_form form .form_title_l1 {
+    font-size: 23px;
+    margin: 0 0 5px 0;
+    text-align: center;
+}
+
+main .block_form form .form_title_l2 {
+    margin: 0 0 5px 0;
+    text-align: center;
+}
+
+main .block_form form .bbb {
+    width: 99%;
+    max-width: none;
+}
+
+main .block_form .block_form_ps {
+    display: none;
+    width: 77%;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0 auto;
+    float: none;
+    overflow: hidden;
+}
+
+main .block_form form .ps1 {
+    display: block;
+    color: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    margin: 0px auto 2px;
+    line-height: 85%;
+    padding: 2px 0 0;
+    a {
+        color: rgba(0, 0, 0, 1);
     }
-    .www_mob {
+}
+
+main .block_form form .ps2 {
+    display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    .footer_feedback {
+        text-align: center;
+        margin: 35px auto;
+    }
+    >.logo,
+    >.www,
+    >.footer_menu {
+        display: none;
+    }
+    [class*="_button"] button {
+
+        height: 15px;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        font-family: "PF Din Text Cond Pro";
+        font-size: 16px;
+        font-weight: 400;
         text-decoration: underline;
+        text-transform: uppercase;
     }
+    [class*="_button"] button:hover,
+    [class*="_button"]:hover {
+        background-color: transparent;
+    }
+}
+
+.www_mob {
+    text-decoration: underline;
+}
+
+
 }
 
 @media (min-width: 1024px) {
     .what_we_can__item_img {
         display: block;
     }
+
     nav {
         padding: 15px 22px;
     }
+
     .menu_button {
         display: none;
     }
+
     [class*="_button"] {
         button {
             font-size: 25px
         }
     }
+
     .menu_tabs__mobile {
         display: none;
     }
+
     .section_nav {
         display: block;
     }
+
     .block_form {
         bottom: 0px;
     }
+
     .owl-prev {
         border-bottom: 9.5px solid transparent;
         border-top: 9.5px solid transparent;
@@ -784,6 +814,7 @@ section .gallery .item {
         bottom: 0;
         margin: auto auto auto -19px;
     }
+
     .owl-next {
         border-bottom: 9.5px solid transparent;
         border-top: 9.5px solid transparent;
@@ -809,6 +840,7 @@ section .gallery .item {
     from {
         background-position-x: 0%;
     }
+
     to {
         background-position-x: -1000%;
     }
