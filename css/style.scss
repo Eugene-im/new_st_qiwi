@@ -1,18 +1,16 @@
 @import 'reset';
 @import 'grid';
-// @import 'gallery';
-// @import 'gallery.theme';
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* высота веб-страницы больше или равна высоте окна браузера */
+
     margin: 0;
 }
 
 main {
     flex: 1;
-    /* если содержимое body меньше высоты окна, то main будет растянут до нужной величины */
 }
 
 
@@ -26,7 +24,7 @@ input {
 }
 
 body {
-    background-color: #fff; // height: 100%; // height: 100vh;
+    background-color: #fff;
 }
 
 main {
@@ -68,9 +66,8 @@ header {
 }
 
 .menu>ul>li a {
-    // text-transform: uppercase;
-    color: #1e1e1e; // font-size: 17px;
-    // font-weight: bold;
+
+    color: #1e1e1e;
 }
 
 .menu>ul>li>.line {
@@ -118,12 +115,18 @@ header {
     width: 100%;
     float: left;
     box-sizing: border-box;
-    z-index: 9999;
+    z-index: 998;
     position: absolute;
-    bottom: 137px;
+    bottom: 271px;
     left: 0;
+    [class*="_button"] button {
+        width: 100%;
+        color: rgb(0, 0, 0);
+        font-size: 25px;
+        font-weight: 500;
+    }
     form {
-        padding: 20px 16px 16px;
+        padding: 20px 7px 16px;
         transform: skewX(-16.5deg);
         background-color: rgba(255, 255, 255, .8);
         box-sizing: border-box;
@@ -185,7 +188,7 @@ header {
             background-position: 0 0;
             font-size: 15px;
             vertical-align: middle;
-            cursor: pointer; // height:auto;
+            cursor: pointer;
         }
         input[type=checkbox].css-checkbox:checked+label.css-label {
             background-position: 0 -26px;
@@ -201,15 +204,13 @@ header {
             margin: 0.4% 0.8% 0.8% 0;
             max-width: 197px;
             width: 100%;
-            padding: 14px 20px 13px 10px;
+            padding: 12px 10px;
             border: 1px solid rgb(78, 86, 89);
             font-size: 20px;
-            font-family: "pfdintextcondpro-regular";
             text-transform: uppercase;
             color: rgb(43, 42, 40);
             text-overflow: clip;
             background: #ffffff;
-            transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
         }
         .item_button {
             float: left;
@@ -241,7 +242,7 @@ nav {
     background-color: rgb(255, 132, 0);
     display: flex;
     flex-direction: column;
-    justify-content: space-around; // padding: 15px 22px;
+    justify-content: space-around;
 }
 
 footer {
@@ -267,6 +268,10 @@ footer {
     text-align: center;
 }
 
+.call_back_button {
+    text-align: center;
+}
+
 .www,
 .footer_menu,
 .footer_place {
@@ -286,7 +291,7 @@ section .error {
 
 section .container {
     display: flex;
-    flex-direction: column; // flex-direction: row-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: stretch;
 }
@@ -316,6 +321,7 @@ section .container {
     background: url(../img/spritesheet_2);
     width: 277px;
     height: 272px;
+    margin: 0 auto;
 }
 
 .item_slide_img.fst,
@@ -426,7 +432,7 @@ input[type=radio].css-checkbox {
     text-align: center;
     >img {
         width: 50%;
-        height: auto; // margin:0 auto;
+        height: auto;
     }
 }
 
@@ -449,7 +455,7 @@ input[type=radio].css-checkbox {
 
 [class*="_button"] {
     button {
-        // width: 197px;
+
         height: 41px;
         background-color: rgb(255, 132, 0);
         font-family: "PF Din Text Cond Pro";
@@ -566,12 +572,14 @@ input[type=radio].css-checkbox:checked+label.css-label>.triangle_int {
 .our_customers_title_l1 {
     font-size: 35px;
     font-weight: 400;
+    padding-top: 42px;
     text-align: center;
     text-transform: uppercase;
 }
 
 .our_customers_title_l2 {
     font-size: 22px;
+    padding-top: 25px;
     font-weight: 300;
     text-align: center;
     font-style: italic;
@@ -585,7 +593,7 @@ section .gallery .item {
 .about_our_equip__item_text {
     font-size: 30px;
     text-transform: uppercase;
-    margin-bottom: 59px;
+    margin: 47px auto 59px;
     h2 {
         margin-bottom: 20px
     }
@@ -619,8 +627,12 @@ section .gallery .item {
     background-color: rgb(253, 192, 41);
 }
 
-// .section_nav
+
 @media (max-width: 1024px) {
+    .content {
+        padding: 0 2%;
+        box-sizing: border-box;
+    }
     .submenu_1,
     .header_place {
         display: none
@@ -639,9 +651,6 @@ section .gallery .item {
     }
     .section_nav {
         align-items: flex-start;
-    }
-    main .block_form form {
-        width: 100%;
     }
     main .block_form .content {
         padding: 0 0;
@@ -670,9 +679,11 @@ section .gallery .item {
     main .block_form form .form_title_l1 {
         font-size: 23px;
         margin: 0 0 5px 0;
+        text-align: center;
     }
     main .block_form form .form_title_l2 {
         margin: 0 0 5px 0;
+        text-align: center;
     }
     main .block_form form .bbb {
         width: 99%;
@@ -702,6 +713,40 @@ section .gallery .item {
     }
     main .block_form form .ps2 {
         display: none;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        .footer_feedback {
+            text-align: center;
+            margin: 35px auto;
+        }
+        >.logo,
+        >.www,
+        >.footer_menu {
+            display: none;
+        }
+        [class*="_button"] button {
+
+            height: 15px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            font-family: "PF Din Text Cond Pro";
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        [class*="_button"] button:hover,
+        [class*="_button"]:hover {
+            background-color: transparent;
+        }
+    }
+    .www_mob {
+        text-decoration: underline;
     }
 }
 
