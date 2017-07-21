@@ -578,7 +578,8 @@ input[type=radio].css-checkbox:checked+label.css-label>.triangle_int {
 }
 
 section .gallery .item {
-    height: 400px;
+    // height: 400px;
+    background: transparent;
 }
 
 .about_our_equip__item_text {
@@ -755,7 +756,7 @@ section .gallery .item {
     width: 100%;
     height: 400px;
     overflow: hidden;
-    background: url(../img/back_sprite.png); // background-position:0px 0px;
+    background: url(../img/back_sprite.png);
     animation: move 10s infinite forwards alternate;
 }
 
