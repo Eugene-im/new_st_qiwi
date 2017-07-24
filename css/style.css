@@ -335,12 +335,8 @@ header {
 
 .block_form {
   width: 100%;
-  float: left;
   box-sizing: border-box;
-  z-index: 998;
-  position: absolute;
-  bottom: 271px;
-  left: 0; }
+  margin-top: -375px; }
   .block_form [class*="_button"] button {
     width: 100%;
     color: black;
@@ -396,7 +392,6 @@ header {
       padding-left: 31px;
       height: 26px;
       display: inline-block;
-      line-height: 14px;
       background-repeat: no-repeat;
       background-position: 0 0;
       font-size: 15px;
@@ -421,13 +416,8 @@ header {
       color: #2b2a28;
       text-overflow: clip;
       background: #ffffff; }
-    .block_form form .item_button {
-      float: left;
+    .block_form form .item__button {
       margin: 0.4% 0.8% 0.8% 0; }
-      .block_form form .item_button > div {
-        font-size: 25px;
-        font-weight: 500;
-        text-transform: uppercase; }
   .block_form .block_form_ps {
     width: auto;
     float: right;
@@ -462,6 +452,14 @@ footer {
     font-size: 150px;
     font-style: normal; }
 
+.header_place {
+  max-width: 231px;
+  font-size: 19px;
+  text-align: center; }
+
+.call_back {
+  min-width: 210px; }
+
 .call_back_number {
   font-size: 19px;
   text-align: center; }
@@ -483,7 +481,7 @@ section .error {
   justify-content: center;
   align-items: center; }
 
-section .container {
+section .container .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -576,6 +574,10 @@ input[type=checkbox].css-checkbox + label.css-label {
   vertical-align: middle;
   cursor: pointer; }
 
+.menu_tabs .section_nav label {
+  display: inline-block;
+  width: 24.8%; }
+
 input[type=checkbox].css-checkbox,
 input[type=radio].css-checkbox {
   position: absolute;
@@ -611,7 +613,12 @@ input[type=radio].css-checkbox {
   align-items: center; }
 .submenu_1 li {
   list-style-type: disc;
-  padding: 2%; }
+  padding: 2%;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase; }
+.submenu_1 li:hover {
+  text-decoration: underline; }
 .submenu_1 li:first-child {
   list-style-type: none; }
 
@@ -661,14 +668,6 @@ input[type=radio]#radio14.css-checkbox:checked + label > .itm_img__radio4 {
   .section_img [class*="itm_img__"] .itm_img.scnd,
   .section_nav [class*="itm_img__"] .itm_img.scnd {
     background-position: 10px 100px; }
-  .section_img [class*="itm_img__"] .first_line,
-  .section_img [class*="itm_img__"] .second_line,
-  .section_nav [class*="itm_img__"] .first_line,
-  .section_nav [class*="itm_img__"] .second_line {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center; }
 
 .section_nav [class*="itm_img__"] .first_line,
 .section_nav [class*="itm_img__"] .second_line {
@@ -697,18 +696,14 @@ input[type=radio]#radio14.css-checkbox:checked + label > .itm_img__radio4 {
   display: inline-block;
   vertical-align: middle; }
 
-input[type=radio].css-checkbox:checked + label.css-label > div {
-  display: inline-block; }
-
 input[type=radio].css-checkbox:checked + label.css-label > .triangle_int {
   background-position: 28px 0px; }
 
-.section_nav {
+.nav_arrow {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center; }
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 
 .our_customers_title_l1 {
   font-size: 35px;
@@ -732,7 +727,8 @@ section .gallery .item {
   text-transform: uppercase;
   margin: 47px auto 59px; }
   .about_our_equip__item_text h2 {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    text-align: center; }
 
 .what_we_can__item_img {
   display: none; }
@@ -754,6 +750,12 @@ section .gallery .item {
 
 .our_customers {
   background-color: #fdc029; }
+
+footer .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
 
 @media (max-width: 1024px) {
   .content {
@@ -777,11 +779,15 @@ section .gallery .item {
     display: block; }
     .menu_tabs__mobile input[type=radio].css-checkbox + label.css-label {
       border-bottom: 1px solid black; }
-    .menu_tabs__mobile .section_nav [class*="itm_img__"], .menu_tabs__mobile input[type=radio].css-checkbox + label.i1.css-label {
-      border-top: 1px solid black; }
+    .menu_tabs__mobile .section_nav [class*="itm_img__"],
+    .menu_tabs__mobile input[type=radio].css-checkbox + label.i1.css-label {
+      border-top: 1px solid black;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: stretch; }
 
   .section_nav {
-    align-items: flex-start; }
+    align-items: stretch; }
 
   main .block_form .content {
     padding: 0 0; }
@@ -840,20 +846,16 @@ section .gallery .item {
   main .block_form form .ps2 {
     display: none; }
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  footer .content {
     padding: 15px 0; }
-    footer .footer_feedback {
+    footer .content .footer_feedback {
       text-align: center;
       margin: 35px auto; }
-    footer > .logo,
-    footer > .www,
-    footer > .footer_menu {
+    footer .content > .logo,
+    footer .content > .www,
+    footer .content > .footer_menu {
       display: none; }
-    footer [class*="_button"] button {
+    footer .content [class*="_button"] button {
       height: 15px;
       background-color: transparent;
       color: white;
@@ -862,13 +864,32 @@ section .gallery .item {
       font-weight: 400;
       text-decoration: underline;
       text-transform: uppercase; }
-    footer [class*="_button"] button:hover,
-    footer [class*="_button"]:hover {
+    footer .content [class*="_button"] button:hover,
+    footer .content [class*="_button"]:hover > button {
       background-color: transparent; }
 
   .www_mob {
-    text-decoration: underline; } }
+    text-decoration: underline; }
+
+  .section_nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; } }
+.www_desk {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
 @media (min-width: 1024px) {
+  .www_desk {
+    flex-direction: row-reverse; }
+
+  .section_nav [class*="itm_img__"] .first_line,
+  .section_nav [class*="itm_img__"] .second_line {
+    flex-direction: row; }
+
   .what_we_can__item_img {
     display: block; }
 
@@ -884,11 +905,8 @@ section .gallery .item {
   .menu_tabs__mobile {
     display: none; }
 
-  .section_nav {
-    display: block; }
-
-  .block_form {
-    bottom: 0px; }
+  .section_nav label > div {
+    text-align: center; }
 
   .owl-prev {
     border-bottom: 9.5px solid transparent;
@@ -909,7 +927,42 @@ section .gallery .item {
     top: 0;
     right: 0;
     bottom: 0;
-    margin: auto -19px auto auto; } }
+    margin: auto -19px auto auto; }
+
+  .block_form {
+    margin-top: -200px; }
+
+  .about_our_equip__item,
+  .about_what_we_can__item {
+    margin-top: 70px; }
+
+  .about_what_we_can__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch; }
+
+  section .container {
+    margin: 0 auto;
+    width: 100%; }
+
+  .block_form form {
+    padding: 20px 18px 16px 45px; }
+
+  .block_form form input.css-checkbox[type="checkbox"] + label.css-label {
+    line-height: 26px; }
+
+  .block_form form .item__button {
+    display: inline-block; }
+
+  section .container .content {
+    flex-direction: row-reverse; }
+
+  .www_mob {
+    display: none; }
+
+  footer .content {
+    flex-direction: row; } }
 .slider {
   width: 100%;
   height: 400px;
