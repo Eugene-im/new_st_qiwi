@@ -457,9 +457,6 @@ footer {
   font-size: 19px;
   text-align: center; }
 
-.call_back {
-  min-width: 210px; }
-
 .call_back_number {
   font-size: 19px;
   text-align: center; }
@@ -468,11 +465,12 @@ footer {
   text-align: center; }
 
 .www,
-.footer_menu,
-.footer_place {
-  text-align: center; }
+.footer_menu {
+  text-align: center;
+  text-decoration: underline; }
 
 .footer_place {
+  text-align: center;
   max-width: 60.6%; }
 
 section .error {
@@ -710,14 +708,20 @@ input[type=radio].css-checkbox:checked + label.css-label > .triangle_int {
   font-weight: 400;
   padding-top: 42px;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background-color: #fdc029; }
 
 .our_customers_title_l2 {
   font-size: 22px;
   padding-top: 25px;
   font-weight: 300;
   text-align: center;
-  font-style: italic; }
+  font-style: italic;
+  background-color: #fdc029;
+  padding-bottom: 30px; }
+
+.menu_tabs {
+  margin-top: -30px; }
 
 section .gallery .item {
   background: transparent; }
@@ -748,14 +752,16 @@ section .gallery .item {
 .about_what_we_can {
   margin-bottom: 15px; }
 
-.our_customers {
-  background-color: #fdc029; }
-
 footer .content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center; }
+
+.block_row {
+  width: 100%;
+  height: 6px;
+  background-color: #fdc029; }
 
 @media (max-width: 1024px) {
   .content {
@@ -883,6 +889,9 @@ footer .content {
   align-items: center; }
 
 @media (min-width: 1024px) {
+  .call_back {
+    min-width: 210px; }
+
   .www_desk {
     flex-direction: row-reverse; }
 
