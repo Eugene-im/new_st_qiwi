@@ -889,6 +889,21 @@ footer .content {
   align-items: center; }
 
 @media (min-width: 1024px) {
+  .footer_feedback .feedback_button button {
+    font-size: 16px;
+    height: auto;
+    background: inherit;
+    padding: 0;
+    text-decoration: underline; }
+
+  .feedback_phone,
+  .feedback_button {
+    text-align: right; }
+
+  .footer_place,
+  .footer_menu {
+    text-align: left; }
+
   .call_back {
     min-width: 210px; }
 
@@ -939,7 +954,7 @@ footer .content {
     margin: auto -19px auto auto; }
 
   .block_form {
-    margin-top: -200px; }
+    margin-top: -250px; }
 
   .about_our_equip__item,
   .about_what_we_can__item {
