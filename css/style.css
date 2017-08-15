@@ -572,9 +572,12 @@ input[type=checkbox].css-checkbox + label.css-label {
   vertical-align: middle;
   cursor: pointer; }
 
-.menu_tabs .section_nav label {
-  display: inline-block;
-  width: 24.8%; }
+.menu_tabs .section_nav {
+  min-height: 150px; }
+  .menu_tabs .section_nav label {
+    display: inline-block;
+    width: 24.6%;
+    margin-bottom: 12px; }
 
 input[type=checkbox].css-checkbox,
 input[type=radio].css-checkbox {
