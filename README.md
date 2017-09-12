@@ -1,4 +1,7 @@
 # new_st_qiwi
-project done without js
-flexbox
-mobilefirst
+project done
+<ul>
+  <li> without js </li>
+  <li> with flexbox </li>
+  <li> with mobilefirst </li>
+</ul>
